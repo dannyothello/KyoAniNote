@@ -45,3 +45,5 @@ const deleteById = async (_id) => {
     const result = await Anime.deleteOne({ _id: _id });
     return result.deletedCount;
 }
+
+export { createAnime, findAnimeById, findAnimes, replaceAnime, deleteById };
