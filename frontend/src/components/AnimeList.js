@@ -1,6 +1,7 @@
+import React from 'react';
 import Anime from './Anime';
 
-function AnimeList({ animes }) {
+function AnimeList({ animes, onDelete, onEdit }) {
     return (
         <table id="animes">
             <thead>
@@ -15,6 +16,8 @@ function AnimeList({ animes }) {
             </thead>
             <tbody>
                 {animes.map((anime, i) => <Anime anime={anime}
+                    onDelete={onDelete}
+                    onEdit={onEdit}
                     key={i} />)}
             </tbody>
         </table>
