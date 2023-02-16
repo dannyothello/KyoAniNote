@@ -21,15 +21,15 @@ See the image below for example parameters: <br>
 The fetch() call will generate a response which will contain a list of the picked objects, formated as JSON.<br>
 You can then grab the data, and use it within your own program.<br>
 See the image below for an example usecase:
-<img src="screenshots/dataReceive.png">
+<img src="screenshots/dataReceive.png" width="40%" height = "40%">
 
 ### Example HTTP request
-<img src="screenshots/exampleRequest.png">
+<img src="screenshots/exampleRequest.png" width="40%" height = "40%">
 
 ### Example HTTP response
-<img src="screenshots/exampleResponse.png">
+<img src="screenshots/exampleResponse.png" width="40%" height = "40%">
 
 ### Example Console log
-<img src="screenshots/exampleConsoleLog.png">
+<img src="screenshots/exampleConsoleLog.png" width="40%" height = "40%">
 
 UML Sequence Diagram:
