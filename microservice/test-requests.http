@@ -1,1 +1,19 @@
 # Tests a PUT request with a list of 10 objects
+PUT http://localhost:3001/pick HTTP/1.1
+content-type: application/json
+
+[
+    {"title":"One Piece", "visual":"Visual1"},
+    {"title":"Naruto", "visual":"Visual2"},
+    {"title":"Death Note", "visual":"Visual3"},
+    {"title":"Demon Slayer", "visual":"Visual4"},
+    {"title":"Bleach", "visual":"Visual5"},
+    {"title":"Code Geass", "visual":"Visual6"},
+    {"title":"Spy X Family", "visual":"Visual7"},
+    {"title":"Pokemon", "visual":"Visual8"},
+    {"title":"Sword Art Online", "visual":"Visual9"},
+    {"title":"Hunter X Hunter", "visual":"Visual10"}
+]
+
+# The response should contain a list of 5 unique randomly
+# chosen objects.
