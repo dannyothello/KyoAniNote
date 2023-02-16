@@ -23,7 +23,7 @@ You can then grab the data, and use it within your own program.<br>
 See the image below for an example usecase:<br>
 <img src="screenshots/dataReceive.png" width="40%" height = "40%">
 
-### How to launch microservice
+## How to launch microservice
 <ul>
   <li>cd into the "microservice" folder</li>
   <li>npm install</li>
