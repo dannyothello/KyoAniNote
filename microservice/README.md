@@ -43,4 +43,4 @@ See the image below for an example usecase:<br>
 <img src="screenshots/exampleConsoleLog.png" width="40%" height = "40%">
 
 ## UML Sequence Diagram:
-<img src="screenshots/Microservice-UML.jpg">
+<img src="screenshots/Microservice UML.jpg">
