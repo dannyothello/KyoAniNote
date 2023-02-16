@@ -19,8 +19,28 @@ app.listen(PORT, (error) =>{
 	}
 )
 
+// Generates a set of 5 numbers in the range [1, 10]
+function randomSetGenerator() {
+    const randNumSet = new Set()
+    while (randNumSet.size < 5){
+        randNumSet.add(Math.floor(Math.random() * 10) + 1)
+    }
+    console.log("here's the list of unique random numbers between 1 and 10:")
+    console.log(randNumSet)
+    return randNumSet
+}
+
+randomSetGenerator()
+
+async function pickAnime(receivedAnime) {
+    let pickedAnimeArr = []
+    let pickIndexSet = new randomNumGenerator()
+    return pickedAnimeArr
+}
+
 app.put("/pick", (req,res) => {
     console.log("Pick is called!")
+    pickAnime(req.body)
 })
 
 app.get('/', (req,res) => {
