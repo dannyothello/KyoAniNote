@@ -19,6 +19,10 @@ app.listen(PORT, (error) =>{
 	}
 )
 
+app.put("/pick", (req,res) => {
+    console.log("Pick is called!")
+})
+
 app.get('/', (req,res) => {
     res.send("Hello world")
 })
