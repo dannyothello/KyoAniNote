@@ -25,16 +25,19 @@ function randomSetGenerator() {
     while (randNumSet.size < 5){
         randNumSet.add(Math.floor(Math.random() * 10) + 1)
     }
-    console.log("here's the list of unique random numbers between 1 and 10:")
+    console.log("here's the set of unique random numbers between 1 and 10:")
     console.log(randNumSet)
     return randNumSet
 }
 
-randomSetGenerator()
-
 async function pickAnime(receivedAnime) {
+    console.log("pickAnime got called!")
     let pickedAnimeArr = []
-    let pickIndexSet = new randomNumGenerator()
+    let pickIndexSet = new randomSetGenerator()
+    for (let pickedIndex of pickIndexSet) {
+        pickedAnimeArr.push(receivedAnime[pickedIndex-1]) // elements can be [1-10], so zero-index
+    }
+    console.log("Final arr:", pickedAnimeArr)
     return pickedAnimeArr
 }
 
