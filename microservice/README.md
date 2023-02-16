@@ -42,4 +42,4 @@ See the image below for an example usecase:<br>
 ### Example Console log
 <img src="screenshots/exampleConsoleLog.png" width="40%" height = "40%">
 
-UML Sequence Diagram:
+# UML Sequence Diagram:
