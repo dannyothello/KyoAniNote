@@ -1,9 +1,11 @@
 # Microservice for KyoAniNote
 
+Input:<br>
 This microservice will receive a list containing 10 anime objects from the client.<br>
-Format = JSON, wrapper = list, Keys = "title","visual")
+Format = JSON, wrapper = list, Keys = "title","visual"
 
-This microservice will randomly pick 5 of the objects, and then respond to the client with a list of the picked objects.<br>
+Output:<br>
+This microservice will then randomly pick 5 of the received anime objects, and then respond to the client with a list of the picked objects.<br>
 Format = JSON, wrapper = list, Keys = "title","visual"
 
 # Communication Contract
