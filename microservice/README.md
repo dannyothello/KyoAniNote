@@ -13,23 +13,23 @@ Format = JSON, wrapper = list, Keys = "title","visual"
 ## How to request data
 
 Call the fetch() with the target URL, which is "http://localhost:3001:pick" in developer mode.<br>
-See the image below for example parameters: 
-<img src="screenshots/dataRequest.png">
+See the image below for example parameters: <br>
+<img src="screenshots/dataRequest.png" height = 50%>
 
-How to receive data:
+## How to receive data:
 
 The fetch() call will generate a response which will contain a list of the picked objects, formated as JSON.<br>
 You can then grab the data, and use it within your own program.<br>
 See the image below for an example usecase:
 <img src="screenshots/dataReceive.png">
 
-Example HTTP request
+### Example HTTP request
 <img src="screenshots/exampleRequest.png">
 
-Example HTTP response
+### Example HTTP response
 <img src="screenshots/exampleResponse.png">
 
-Example Console log
+### Example Console log
 <img src="screenshots/exampleConsoleLog.png">
 
 UML Sequence Diagram:
