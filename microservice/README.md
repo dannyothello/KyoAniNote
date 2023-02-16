@@ -30,6 +30,9 @@ See the image below for an example usecase:<br>
   <li>npm start (or optionally, "npm start:dev" for nodemon support)</li>
 </ul>
 
+### Example result of microservice launch
+<img src="screenshots/launchingServer.png" width="40%" height = "40%">
+
 ### Example HTTP request
 <img src="screenshots/exampleRequest.png" width="40%" height = "40%">
 
