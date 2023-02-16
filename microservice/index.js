@@ -1,8 +1,8 @@
 // This microservice receives:
-// A list containing JSON objects with keys of "title" and "visual".
+// A list containing JSON objects (keys: "title" and "visual").
 // 
 // This microservice returns:
-// A list containing 5 randomly picked JSON objects.
+// A list containing 5 randomly picked JSON objects from the input.
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -30,6 +30,8 @@ function randomSetGenerator() {
     return randNumSet
 }
 
+// Takes the list of objects, randomly chooses 5 of them, and then returns an array containing
+// the picked objects.
 async function pickAnime(receivedAnime) {
     console.log("pickAnime is called!")
     let pickedAnimeArr = []
@@ -41,14 +43,11 @@ async function pickAnime(receivedAnime) {
     return pickedAnimeArr
 }
 
+// This is the primary usecase of the microservice.
 app.put("/pick", (req,res) => {
     console.log("PUT/pick is called!")
     pickAnime(req.body)
         .then(pickedAnimeArr => {
             res.status(201).json(pickedAnimeArr)
         })
-})
-
-app.get('/', (req,res) => {
-    res.send("Hello world")
 })
