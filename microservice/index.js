@@ -25,13 +25,13 @@ function randomSetGenerator() {
     while (randNumSet.size < 5){
         randNumSet.add(Math.floor(Math.random() * 10) + 1)
     }
-    console.log("here's the set of unique random numbers between 1 and 10:")
+    console.log("Here's the set of unique random numbers between 1 and 10:")
     console.log(randNumSet)
     return randNumSet
 }
 
 async function pickAnime(receivedAnime) {
-    console.log("pickAnime got called!")
+    console.log("pickAnime is called!")
     let pickedAnimeArr = []
     let pickIndexSet = new randomSetGenerator()
     for (let pickedIndex of pickIndexSet) {
@@ -42,8 +42,11 @@ async function pickAnime(receivedAnime) {
 }
 
 app.put("/pick", (req,res) => {
-    console.log("Pick is called!")
+    console.log("PUT/pick is called!")
     pickAnime(req.body)
+        .then(pickedAnimeArr => {
+            res.status(201).json(pickedAnimeArr)
+        })
 })
 
 app.get('/', (req,res) => {
