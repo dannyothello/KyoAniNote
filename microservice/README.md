@@ -14,7 +14,7 @@ Format = JSON, wrapper = list, Keys = "title","visual"
 
 Call the fetch() with the target URL, which is "http://localhost:3001:pick" in developer mode.<br>
 See the image below for example parameters: <br>
-<img src="screenshots/dataRequest.png" width height = "20%">
+<img src="screenshots/dataRequest.png" width="20%" height = "20%">
 
 ## How to receive data:
 
