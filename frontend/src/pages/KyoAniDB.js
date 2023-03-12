@@ -33,7 +33,10 @@ function KyoAniDB() {
             },
         })
         .then(response => response.json())
-        .then(text => setAnimes(text))
+        .then(text => {
+            console.log(text)
+            setAnimes(text)
+        })
     }
 
     return (
