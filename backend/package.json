@@ -5,7 +5,8 @@
     "main": "animes_controller.mjs",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon animes_controller.mjs"
+        "start": "nodemon animes_controller.mjs",
+        "build": "npm i"
     },
     "author": "Daniel Hong",
     "license": "ISC",
