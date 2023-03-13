@@ -6,27 +6,27 @@ import AnimeLib from '../components/AnimeLib';
 function KyoAniDB() {
 
     const [animes, setAnimes] = useState([
-        { title: "Hyouka", visual: "https://www.kyotoanimation.co.jp/img/kotenbu/bgIndex.jpg" },
-        { title: "Tamako Market", visual: "https://cdn.myanimelist.net/images/anime/1669/122434l.jpg" },
-        { title: "Violet Evergarden", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/violet.jpg" },
-        { title: "Liz and the Blue Bird", visual: "https://cdn.myanimelist.net/images/anime/1638/93032l.jpg" },
-        { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg" }
+        { title: "Hyouka", visual: "https://www.kyotoanimation.co.jp/img/kotenbu/bgIndex.jpg", type: "TV Show" },
+        { title: "Tamako Market", visual: "https://cdn.myanimelist.net/images/anime/1669/122434l.jpg", type: "TV Show"},
+        { title: "Violet Evergarden", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/violet.jpg", type: "TV Show" },
+        { title: "Liz and the Blue Bird", visual: "https://cdn.myanimelist.net/images/anime/1638/93032l.jpg", type: "Movie" },
+        { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg", type: "TV Show" }
     ]);
 
     const genRandom = () => {
         fetch('http://localhost:3001/pick', {
             method: 'PUT',
             body: JSON.stringify([
-                { title: "Hyouka", visual: "https://www.kyotoanimation.co.jp/img/kotenbu/bgIndex.jpg" },
-                { title: "Tamako Market", visual: "https://cdn.myanimelist.net/images/anime/1669/122434l.jpg" },
-                { title: "Violet Evergarden", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/violet.jpg" },
-                { title: "Liz and the Blue Bird", visual: "https://cdn.myanimelist.net/images/anime/1638/93032l.jpg" },
-                { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg" },
-                { title: "Clannad", visual: "https://cdn.myanimelist.net/images/anime/1804/95033l.jpg" },
-                { title: "Tsurune", visual: "https://cdn.myanimelist.net/images/anime/1360/93571l.jpg" },
-                { title: "A Silent Voice", visual: "https://cdn.myanimelist.net/images/anime/1122/96435l.jpg" },
-                { title: "K-On!", visual: "https://cdn.myanimelist.net/images/anime/10/76120l.jpg" },
-                { title: "Tamako Love Story", visual: "https://cdn.myanimelist.net/images/anime/1417/91333l.jpg" }
+                { title: "Hyouka", visual: "https://www.kyotoanimation.co.jp/img/kotenbu/bgIndex.jpg", type: "TV Show" },
+                { title: "Tamako Market", visual: "https://cdn.myanimelist.net/images/anime/1669/122434l.jpg", type: "TV Show" },
+                { title: "Violet Evergarden", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/violet.jpg", type: "TV Show" },
+                { title: "Liz and the Blue Bird", visual: "https://cdn.myanimelist.net/images/anime/1638/93032l.jpg", type: "Movie" },
+                { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg", type: "TV Show" },
+                { title: "Clannad", visual: "https://cdn.myanimelist.net/images/anime/1804/95033l.jpg", type: "TV Show" },
+                { title: "Tsurune", visual: "https://cdn.myanimelist.net/images/anime/1360/93571l.jpg", type: "TV Show" },
+                { title: "A Silent Voice", visual: "https://cdn.myanimelist.net/images/anime/1122/96435l.jpg", type: "Movie" },
+                { title: "K-On!", visual: "https://cdn.myanimelist.net/images/anime/10/76120l.jpg", type: "TV Show"},
+                { title: "Tamako Love Story", visual: "https://cdn.myanimelist.net/images/anime/1417/91333l.jpg", type: "Movie" }
             ]),
             headers: {
                 'Content-Type': 'application/json',

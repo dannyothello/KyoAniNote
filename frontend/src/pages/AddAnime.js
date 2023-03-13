@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export const AddAnime = () => {
 
     const history = useHistory();
+    let arrayFragment = window.location.href.split('/');
+    const discoverTitle = arrayFragment[arrayFragment.length - 2]
+    const discoverType = arrayFragment[arrayFragment.length - 1]
 
-    const [title, setTitle] = useState('');
+    console.log(discoverTitle)
+    console.log(discoverType)
+
+    let [title, setTitle] = useState('');
     const [score, setScore] = useState('');
     const [progress, setProgress] = useState('');
     const [type, setType] = useState('');
@@ -27,13 +33,22 @@ export const AddAnime = () => {
         history.push("/anime-list");
     };
 
+    useEffect(() => {
+        if (discoverTitle) {
+            setTitle(decodeURI(discoverTitle))
+        }
+        if (discoverType) {
+            setType(decodeURI(discoverType))
+        }
+    }, [discoverTitle, discoverType]);
+
     return (
         <div>
             <h1>Add Anime</h1>
             <input
                 type="text"
-                placeholder="Enter title here"
                 value={title}
+                placeholder="Enter title here"
                 onChange={e => setTitle(e.target.value)} />
             <input
                 type="number"

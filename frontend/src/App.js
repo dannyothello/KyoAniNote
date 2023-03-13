@@ -28,7 +28,7 @@ function App() {
           <Route path="/anime-list">
             <KyoAniList setAnimeToEdit={setAnimeToEdit} />
           </Route>
-          <Route path="/add-anime">
+          <Route path="/add-anime/:title?/:type?" component={AddAnime}>
             <AddAnime />
           </Route>
           <Route path="/edit-anime">
