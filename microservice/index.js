@@ -2,7 +2,7 @@
 // A list containing JSON objects (keys: "title" and "visual").
 // 
 // This microservice returns:
-// A list containing 5 randomly picked JSON objects from the input.
+// A list containing 6 randomly picked JSON objects from the input.
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -21,10 +21,10 @@ app.listen(PORT, (error) => {
 }
 )
 
-// Generates a set of 5 numbers in the range [1, 10]
+// Generates a set of 6 numbers in the range [1, 10]
 function randomSetGenerator() {
     const randNumSet = new Set()
-    while (randNumSet.size < 5) {
+    while (randNumSet.size < 6) {
         randNumSet.add(Math.floor(Math.random() * 10) + 1)
     }
     console.log("Here's the set of unique random numbers between 1 and 10:")
@@ -32,7 +32,7 @@ function randomSetGenerator() {
     return randNumSet
 }
 
-// Takes the list of objects, randomly chooses 5 of them, and then returns an array containing
+// Takes the list of objects, randomly chooses 6 of them, and then returns an array containing
 // the picked objects.
 async function pickAnime(receivedAnime) {
     console.log("pickAnime is called!")

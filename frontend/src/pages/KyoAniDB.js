@@ -10,7 +10,8 @@ function KyoAniDB() {
         { title: "Tamako Market", visual: "https://cdn.myanimelist.net/images/anime/1669/122434l.jpg", type: "TV Show"},
         { title: "Violet Evergarden", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/violet.jpg", type: "TV Show" },
         { title: "Liz and the Blue Bird", visual: "https://cdn.myanimelist.net/images/anime/1638/93032l.jpg", type: "Movie" },
-        { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg", type: "TV Show" }
+        { title: "Nichijou", visual: "https://www.kyotoanimation.co.jp/img/works/key_visual/nichijou.jpg", type: "TV Show" },
+        { title: "Tsurune", visual: "https://cdn.myanimelist.net/images/anime/1360/93571l.jpg", type: "TV Show" }
     ]);
 
     const genRandom = () => {
