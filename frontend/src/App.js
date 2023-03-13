@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>KyoAniNote</h1>
+        <div class="header">
+          <h1>KyoAniNote</h1>
+        </div>
         <p>
           Discover and track your favorite Kyoto Animation media
         </p>

@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.post('/animes', (req, res) => {
-    animes.createAnime(req.body.title, req.body.score, req.body.progress, req.body.type)
+    animes.createAnime(req.body.title, req.body.story, req.body.animation, req.body.progress, req.body.type)
         .then(anime => {
             res.status(201).json(anime);
         })
@@ -49,10 +49,10 @@ app.get('/animes', (req, res) => {
 });
 
 app.put('/animes/:_id', (req, res) => {
-    animes.replaceAnime(req.params._id, req.body.title, req.body.score, req.body.progress, req.body.type)
+    animes.replaceAnime(req.params._id, req.body.title, req.body.story, req.body.animation, req.body.progress, req.body.type)
         .then(numUpdated => {
             if (numUpdated === 1) {
-                res.json({ _id: req.params._id, title: req.body.title, score: req.body.score, progress: req.body.progress, type: req.body.type })
+                res.json({ _id: req.params._id, title: req.body.title, story: req.body.story, animation: req.body.animation, progress: req.body.progress, type: req.body.type })
             } 
             else {
                 res.status(404).json({ Error: 'Not found' });

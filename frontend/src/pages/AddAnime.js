@@ -8,16 +8,14 @@ export const AddAnime = () => {
     const discoverTitle = arrayFragment[arrayFragment.length - 2]
     const discoverType = arrayFragment[arrayFragment.length - 1]
 
-    console.log(discoverTitle)
-    console.log(discoverType)
-
     let [title, setTitle] = useState('');
-    const [score, setScore] = useState('');
+    const [story, setStory] = useState('');
+    const [animation, setAnimation] = useState('')
     const [progress, setProgress] = useState('');
     const [type, setType] = useState('');
 
     const addAnime = async () => {
-        const newAnime = { title, score, progress, type };
+        const newAnime = { title, story, animation, progress, type };
         const response = await fetch('/animes', {
             method: 'POST',
             body: JSON.stringify(newAnime),
@@ -34,7 +32,7 @@ export const AddAnime = () => {
     };
 
     useEffect(() => {
-        if (discoverTitle) {
+        if (discoverTitle !== ("localhost:8000")) {
             setTitle(decodeURI(discoverTitle))
         }
         if (discoverType) {
@@ -48,17 +46,22 @@ export const AddAnime = () => {
             <input
                 type="text"
                 value={title}
-                placeholder="Enter title here"
+                placeholder="Enter title"
                 onChange={e => setTitle(e.target.value)} />
             <input
                 type="number"
-                value={score}
-                placeholder="Enter score here"
-                onChange={e => setScore(e.target.value)} />
+                value={story}
+                placeholder="Enter story score"
+                onChange={e => setStory(e.target.value)} />
+            <input
+                type="number"
+                value={animation}
+                placeholder="Enter animation score"
+                onChange={e => setAnimation(e.target.value)} />
             <input
                 type="number"
                 value={progress}
-                placeholder="Enter progress here"
+                placeholder="Enter progress"
                 onChange={e => setProgress(e.target.value)} />
             <select id="type" value={type} onChange={e => setType(e.target.value)} >
                 <option value="">--Choose type--</option>

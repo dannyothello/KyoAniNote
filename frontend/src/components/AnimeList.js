@@ -7,7 +7,8 @@ function AnimeList({ animes, onDelete, onEdit }) {
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Score</th>
+                    <th>Story Score</th>
+                    <th>Animation Score</th>
                     <th>Progress</th>
                     <th>Type</th>
                     <th>Edit</th>

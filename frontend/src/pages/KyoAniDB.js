@@ -42,7 +42,7 @@ function KyoAniDB() {
 
     return (
         <>
-            <button
+            <button className="randomize"
                 type="button"
                 onClick={genRandom}>
                 Randomize Anime
@@ -50,7 +50,7 @@ function KyoAniDB() {
 
             <div className='container-fluid movie-app'>
                 <div class="boxed">
-                    Click on a visual to add a new Kyoto Animation show you've watched to your tracker!
+                    Click on a visual to add a new Kyoto Animation show or movie you've watched to your tracker!
                 </div>
                 <div className='row'>
                     <AnimeLib animes={animes} />

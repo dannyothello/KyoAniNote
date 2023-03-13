@@ -14,15 +14,16 @@ db.once("open", () => {
 
 const animeSchema = mongoose.Schema({
     title: { type: String, required: true },
-    score: { type: Number, required: true },
+    story: { type: Number, required: true },
+    animation: { type: Number, required: true },
     progress: { type: Number, required: true },
     type: { type: String, required: true },
 });
 
 const Anime = mongoose.model("Anime", animeSchema);
 
-const createAnime = async (title, score, progress, type) => {
-    const anime = new Anime({ title: title, score: score, progress: progress, type: type });
+const createAnime = async (title, story, animation, progress, type) => {
+    const anime = new Anime({ title: title, story: story, animation: animation, progress: progress, type: type });
     return anime.save();
 }
 
@@ -36,8 +37,8 @@ const findAnimes = async (filter) => {
     return query.exec();
 }
 
-const replaceAnime = async (_id, title, score, progress, type) => {
-    const result = await Anime.replaceOne({ _id: _id }, { title: title, score: score, progress: progress, type: type });
+const replaceAnime = async (_id, title, story, animation, progress, type) => {
+    const result = await Anime.replaceOne({ _id: _id }, { title: title, story: story, animation: animation, progress: progress, type: type });
     return result.modifiedCount;
 }
 

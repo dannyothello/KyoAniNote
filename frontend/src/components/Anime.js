@@ -5,7 +5,8 @@ function Anime({ anime, onDelete, onEdit }) {
     return (
         <tr>
             <td>{anime.title}</td>
-            <td>{anime.score}</td>
+            <td>{anime.story}</td>
+            <td>{anime.animation}</td>
             <td>{anime.progress}</td>
             <td>{anime.type}</td>
             <td>< MdEdit onClick={() => onEdit(anime)} /></td>

@@ -4,14 +4,15 @@ import { useHistory } from "react-router-dom";
 export const EditAnime = ({ animeToEdit }) => {
 
     const [title, setTitle] = useState(animeToEdit.title);
-    const [score, setScore] = useState(animeToEdit.score);
+    const [story, setStory] = useState(animeToEdit.story);
+    const [animation, setAnimation] = useState(animeToEdit.animation);
     const [progress, setProgress] = useState(animeToEdit.progress);
     const [type, setType] = useState(animeToEdit.type);
 
     const history = useHistory();
 
     const editAnime = async () => {
-        const editedAnime = { title, score, progress, type };
+        const editedAnime = { title, story, animation, progress, type };
         const response = await fetch(`/animes/${animeToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify(editedAnime),
@@ -36,8 +37,12 @@ export const EditAnime = ({ animeToEdit }) => {
                 onChange={e => setTitle(e.target.value)} />
             <input
                 type="number"
-                value={score}
-                onChange={e => setScore(e.target.value)} />
+                value={story}
+                onChange={e => setStory(e.target.value)} />
+            <input
+                type="number"
+                value={animation}
+                onChange={e => setAnimation(e.target.value)} />
             <input
                 type="number"
                 value={progress}
