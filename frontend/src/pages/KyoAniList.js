@@ -10,9 +10,9 @@ function KyoAniList({ setAnimeToEdit }) {
     const history = useHistory();
 
     const onDelete = async id => {
-        const response = await fetch(`/animes/${id}`, { method: 'DELETE' });
+        const response = await fetch(`https://kyoaninote-production.up.railway.app/animes/${id}`, { method: 'DELETE' });
         if (response.status === 204) {
-            const getResponse = await fetch('/animes');
+            const getResponse = await fetch('https://kyoaninote-production.up.railway.app/animes');
             const animes = await getResponse.json();
             setAnimes(animes);
         } else {
@@ -26,7 +26,7 @@ function KyoAniList({ setAnimeToEdit }) {
     }
 
     const loadAnimes = async () => {
-        const response = await fetch('/animes');
+        const response = await fetch('https://kyoaninote-production.up.railway.app/animes');
         const animes = await response.json();
         setAnimes(animes);
     }
