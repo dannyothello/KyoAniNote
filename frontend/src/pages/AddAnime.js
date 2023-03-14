@@ -16,7 +16,7 @@ export const AddAnime = () => {
 
     const addAnime = async () => {
         const newAnime = { title, story, animation, progress, type };
-        const response = await fetch('https://kyoaninote-production.up.railway.app/animes', {
+        const response = await fetch('https://kyoani-note.onrender.com/animes', {
             method: 'POST',
             body: JSON.stringify(newAnime),
             headers: {

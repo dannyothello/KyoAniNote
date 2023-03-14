@@ -13,7 +13,7 @@ export const EditAnime = ({ animeToEdit }) => {
 
     const editAnime = async () => {
         const editedAnime = { title, story, animation, progress, type };
-        const response = await fetch(`https://kyoaninote-production.up.railway.app/animes/${animeToEdit._id}`, {
+        const response = await fetch(`https://kyoani-note.onrender.com/animes/${animeToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify(editedAnime),
             headers: {
