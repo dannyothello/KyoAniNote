@@ -15,7 +15,7 @@ function KyoAniDB() {
     ]);
 
     const genRandom = () => {
-        fetch('http://localhost:3001/pick', {
+        fetch('https://random-anime-microservice.onrender.com/pick', {
             method: 'PUT',
             body: JSON.stringify([
                 { title: "Hyouka", visual: "https://www.kyotoanimation.co.jp/img/kotenbu/bgIndex.jpg", type: "TV Show" },
