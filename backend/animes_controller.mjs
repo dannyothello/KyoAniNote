@@ -2,10 +2,12 @@ import express from 'express';
 import { body } from 'express-validator';
 import 'dotenv/config';
 import * as animes from './animes_model.mjs';
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors({ origin: "*", }))
 
 app.post('/animes', (req, res) => {
     animes.createAnime(req.body.title, req.body.story, req.body.animation, req.body.progress, req.body.type)
