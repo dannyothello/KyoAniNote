@@ -32,7 +32,7 @@ export const AddAnime = () => {
     };
 
     useEffect(() => {
-        if (discoverTitle !== ("localhost:8000") || discoverTitle !== ("willowy-elf-fe3321.netlify.app")) {
+        if (discoverTitle !== ("localhost:8000") && discoverTitle !== ("willowy-elf-fe3321.netlify.app")) {
             setTitle(decodeURI(discoverTitle))
         }
         if (discoverType) {
